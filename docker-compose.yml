@@ -1,0 +1,58 @@
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${WORDPRESS_DB_NAME:-wp_factory}
+      MYSQL_USER: ${WORDPRESS_DB_USER:-wp_factory}
+      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wp_factory_password}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-wp_factory_root_password}
+    volumes:
+      - wp_factory_db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  wordpress:
+    image: wordpress:6.5-php8.2-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${WORDPRESS_PORT:-8088}:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-wp_factory}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wp_factory}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wp_factory_password}
+      WORDPRESS_DEBUG: ${WORDPRESS_DEBUG:-1}
+    volumes:
+      - wp_factory_wordpress:/var/www/html
+      - ./wordpress/uploads:/var/www/html/wp-content/uploads
+      - ./wordpress/exports:/var/www/html/wp-content/exports
+
+  wpcli:
+    image: wordpress:cli-php8.2
+    depends_on:
+      db:
+        condition: service_healthy
+      wordpress:
+        condition: service_started
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-wp_factory}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wp_factory}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wp_factory_password}
+    volumes:
+      - wp_factory_wordpress:/var/www/html
+      - ./wordpress/uploads:/var/www/html/wp-content/uploads
+      - ./wordpress/exports:/var/www/html/wp-content/exports
+    working_dir: /var/www/html
+    entrypoint: ["wp"]
+
+volumes:
+  wp_factory_db:
+  wp_factory_wordpress:

@@ -58,13 +58,30 @@ node scripts/validate-export-package.js \
 ## Run A 5-Site Prototype
 
 ```bash
-node wp-factory/scripts/batch-run.js --input wp-factory/batches/week-01-sample.csv --limit 5
+node scripts/batch-run.js --input batches/week-01-sample.csv --limit 5
 ```
+
+## Local WordPress Test Site
+
+To create the first real OceanWP + Elementor export, use:
+
+```bash
+cp .env.example .env
+docker compose up -d
+```
+
+Then open:
+
+```text
+http://localhost:8088
+```
+
+Full instructions: `docs/local-wordpress-setup.md`
 
 Outputs are written to:
 
 ```text
-wp-factory/projects/<projectId>/
+projects/<projectId>/
 ```
 
 Each project contains:
