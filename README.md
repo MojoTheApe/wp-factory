@@ -41,6 +41,20 @@ node scripts/build-template-package.js \
   --template template-packages/oceanwp-elementor-agency-01
 ```
 
+Validate a source template package:
+
+```bash
+node scripts/validate-template-package.js \
+  --template template-packages/oceanwp-elementor-agency-01
+```
+
+Validate a rendered export package:
+
+```bash
+node scripts/validate-export-package.js \
+  --dir exports/wp_puffy-paws_0001
+```
+
 ## Run A 5-Site Prototype
 
 ```bash

@@ -65,3 +65,24 @@ exports/<projectId>/
 The first package is an Elementor-style JSON placeholder package, not a real Elementor import yet.
 
 The purpose is to lock the factory contract before hosting is ready. When we get a WordPress server, Billy will replace the fake Elementor JSON with real exported Elementor templates and keep the same variable system.
+
+## Validation
+
+Validate a source package:
+
+```bash
+node scripts/validate-template-package.js --template template-packages/oceanwp-elementor-agency-01
+```
+
+Validate a rendered export:
+
+```bash
+node scripts/validate-export-package.js --dir exports/wp_puffy-paws_0001
+```
+
+These checks are intentionally simple:
+
+- required files exist
+- JSON files parse
+- rendered exports have no unresolved `{{VARIABLE}}` placeholders
+- preview HTML exists
