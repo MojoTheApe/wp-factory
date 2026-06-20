@@ -1,0 +1,16 @@
+{
+  "type": "elementor-template-placeholder",
+  "title": "{{COMPANY_NAME}} Services",
+  "page": "services",
+  "sections": [
+    {
+      "id": "services-list",
+      "type": "cards",
+      "items": [
+        { "title": "{{SERVICE_1_TITLE}}", "body": "{{SERVICE_1_BODY}}" },
+        { "title": "{{SERVICE_2_TITLE}}", "body": "{{SERVICE_2_BODY}}" },
+        { "title": "{{SERVICE_3_TITLE}}", "body": "{{SERVICE_3_BODY}}" }
+      ]
+    }
+  ]
+}

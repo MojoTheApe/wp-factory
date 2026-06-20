@@ -1,0 +1,27 @@
+{
+  "required": [
+    "COMPANY_NAME",
+    "DOMAIN",
+    "PRIMARY_COLOR",
+    "ACCENT_COLOR",
+    "BACKGROUND_COLOR",
+    "TEXT_COLOR",
+    "HEADING_FONT",
+    "BODY_FONT",
+    "LOGO_TEXT",
+    "HERO_KICKER",
+    "HERO_TITLE",
+    "HERO_BODY",
+    "INTRO_BODY",
+    "ABOUT_BODY",
+    "CTA_BODY",
+    "SERVICE_1_TITLE",
+    "SERVICE_1_BODY",
+    "SERVICE_2_TITLE",
+    "SERVICE_2_BODY",
+    "SERVICE_3_TITLE",
+    "SERVICE_3_BODY",
+    "CITY",
+    "COUNTRY"
+  ]
+}

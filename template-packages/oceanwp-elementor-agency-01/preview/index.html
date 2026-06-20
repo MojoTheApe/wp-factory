@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{COMPANY_NAME}}</title>
+  <style>
+    :root {
+      --primary: {{PRIMARY_COLOR}};
+      --accent: {{ACCENT_COLOR}};
+      --bg: {{BACKGROUND_COLOR}};
+      --text: {{TEXT_COLOR}};
+      --heading: "{{HEADING_FONT}}", sans-serif;
+      --body: "{{BODY_FONT}}", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--body); }
+    header { background: #fff; border-bottom: 1px solid #e8e8e8; }
+    .wrap { width: min(1140px, calc(100% - 32px)); margin: 0 auto; }
+    .nav { height: 76px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-family: var(--heading); }
+    .mark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: var(--primary); color: white; }
+    nav { display: flex; gap: 24px; color: #444; font-size: 14px; }
+    .hero { padding: 86px 0; background: linear-gradient(135deg, #fff, var(--bg)); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+    h1, h2, h3 { font-family: var(--heading); margin: 0; line-height: 1.1; }
+    h1 { font-size: 64px; }
+    h2 { font-size: 42px; }
+    p { line-height: 1.7; color: #4b5563; }
+    .kicker { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; font-weight: 800; font-size: 13px; }
+    .button { display: inline-block; margin-top: 24px; padding: 15px 22px; border-radius: 4px; color: #fff; background: var(--primary); font-weight: 800; text-decoration: none; }
+    .photo { min-height: 360px; border-radius: 6px; background: radial-gradient(circle at 30% 25%, var(--accent), transparent 24%), radial-gradient(circle at 70% 70%, var(--primary), transparent 32%), #fff; box-shadow: 0 30px 80px rgba(0,0,0,.14); }
+    section { padding: 74px 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 30px; }
+    .card { background: #fff; padding: 28px; border-radius: 6px; border: 1px solid #e5e7eb; }
+    .band { background: var(--primary); color: #fff; text-align: center; }
+    .band p { color: rgba(255,255,255,.76); }
+    footer { background: #111827; color: #fff; padding: 40px 0; }
+    footer p { color: rgba(255,255,255,.72); }
+    @media (max-width: 800px) {
+      nav { display: none; }
+      .grid, .cards { grid-template-columns: 1fr; }
+      h1 { font-size: 42px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo"><span class="mark">{{LOGO_TEXT}}</span>{{COMPANY_NAME}}</div>
+      <nav><span>About</span><span>Services</span><span>Contact</span><span>Legal</span></nav>
+    </div>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="wrap grid">
+        <div>
+          <div class="kicker">{{HERO_KICKER}}</div>
+          <h1>{{HERO_TITLE}}</h1>
+          <p>{{HERO_BODY}}</p>
+          <a href="#" class="button">Start a conversation</a>
+        </div>
+        <div class="photo"></div>
+      </div>
+    </div>
+    <section>
+      <div class="wrap">
+        <h2>Digital support shaped around clear business goals.</h2>
+        <p>{{INTRO_BODY}}</p>
+        <div class="cards">
+          <div class="card"><h3>{{SERVICE_1_TITLE}}</h3><p>{{SERVICE_1_BODY}}</p></div>
+          <div class="card"><h3>{{SERVICE_2_TITLE}}</h3><p>{{SERVICE_2_BODY}}</p></div>
+          <div class="card"><h3>{{SERVICE_3_TITLE}}</h3><p>{{SERVICE_3_BODY}}</p></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap grid">
+        <div><h2>About {{COMPANY_NAME}}</h2><p>{{ABOUT_BODY}}</p></div>
+        <div class="photo"></div>
+      </div>
+    </section>
+    <section class="band">
+      <div class="wrap">
+        <h2>Make the next version of your online presence easier to trust.</h2>
+        <p>{{CTA_BODY}}</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>{{COMPANY_NAME}}</strong>
+      <p>{{CITY}}, {{COUNTRY}} | info@{{DOMAIN}} | Privacy Policy | Terms and Conditions | Cookie Policy</p>
+    </div>
+  </footer>
+</body>
+</html>

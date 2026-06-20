@@ -1,0 +1,31 @@
+{
+  "templateId": "oceanwp-elementor-agency-01",
+  "name": "OceanWP Elementor Agency 01",
+  "stack": {
+    "theme": "oceanwp",
+    "plugins": [
+      "elementor",
+      "header-footer-elementor",
+      "ocean-extra",
+      "gtranslate"
+    ]
+  },
+  "pages": [
+    "home",
+    "about",
+    "services",
+    "contact"
+  ],
+  "style": {
+    "density": "medium",
+    "sections": [
+      "header",
+      "hero",
+      "services",
+      "about",
+      "why_choose",
+      "cta",
+      "footer"
+    ]
+  }
+}

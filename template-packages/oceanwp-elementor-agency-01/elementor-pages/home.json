@@ -1,0 +1,50 @@
+{
+  "type": "elementor-template-placeholder",
+  "title": "{{COMPANY_NAME}} Home",
+  "page": "home",
+  "settings": {
+    "primaryColor": "{{PRIMARY_COLOR}}",
+    "accentColor": "{{ACCENT_COLOR}}",
+    "backgroundColor": "{{BACKGROUND_COLOR}}",
+    "textColor": "{{TEXT_COLOR}}",
+    "headingFont": "{{HEADING_FONT}}",
+    "bodyFont": "{{BODY_FONT}}"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "kicker": "{{HERO_KICKER}}",
+      "title": "{{HERO_TITLE}}",
+      "body": "{{HERO_BODY}}",
+      "button": "Start a conversation"
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "title": "Digital support shaped around clear business goals.",
+      "body": "{{INTRO_BODY}}"
+    },
+    {
+      "id": "services",
+      "type": "cards",
+      "items": [
+        { "title": "{{SERVICE_1_TITLE}}", "body": "{{SERVICE_1_BODY}}" },
+        { "title": "{{SERVICE_2_TITLE}}", "body": "{{SERVICE_2_BODY}}" },
+        { "title": "{{SERVICE_3_TITLE}}", "body": "{{SERVICE_3_BODY}}" }
+      ]
+    },
+    {
+      "id": "about",
+      "type": "split",
+      "title": "About {{COMPANY_NAME}}",
+      "body": "{{ABOUT_BODY}}"
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "title": "Make the next version of your online presence easier to trust.",
+      "body": "{{CTA_BODY}}"
+    }
+  ]
+}

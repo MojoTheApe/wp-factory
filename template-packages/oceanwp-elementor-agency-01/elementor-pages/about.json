@@ -1,0 +1,19 @@
+{
+  "type": "elementor-template-placeholder",
+  "title": "About {{COMPANY_NAME}}",
+  "page": "about",
+  "sections": [
+    {
+      "id": "about-main",
+      "type": "text",
+      "title": "About {{COMPANY_NAME}}",
+      "body": "{{ABOUT_BODY}}"
+    },
+    {
+      "id": "location",
+      "type": "text",
+      "title": "Practical digital support",
+      "body": "{{COMPANY_NAME}} works with businesses from {{CITY}}, {{COUNTRY}} and beyond."
+    }
+  ]
+}

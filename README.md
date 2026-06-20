@@ -22,6 +22,25 @@ domains.csv
   -> run QA
 ```
 
+## Template Package Flow
+
+Reusable site templates live in `template-packages/`. They are source templates with variable placeholders.
+
+```text
+site.json + template package
+  -> exports/<projectId>/
+  -> ready-to-import package files
+  -> preview/index.html
+```
+
+Build a package for a generated site:
+
+```bash
+node scripts/build-template-package.js \
+  --site projects/wp_puffy-paws_0001/site.json \
+  --template template-packages/oceanwp-elementor-agency-01
+```
+
 ## Run A 5-Site Prototype
 
 ```bash
@@ -52,7 +71,7 @@ Each project contains:
 ## Next Milestones
 
 1. Review generated 5-site previews.
-2. Add real WordPress export format.
-3. Add staging WordPress import.
+2. Add real Elementor/OceanWP export format.
+3. Add staging WordPress import when hosting is ready.
 4. Add screenshot QA.
 5. Add deployment safeguards and batch resume.

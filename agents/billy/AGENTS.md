@@ -26,5 +26,6 @@ Build and later deploy simple WordPress sites from `site.json`.
 ## MVP Output
 
 - static preview HTML
-- future: Elementor template JSON or block theme markup
+- template package export under `exports/<projectId>/`
+- future: Elementor template JSON import payloads
 - future: WordPress import report

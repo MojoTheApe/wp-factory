@@ -1,0 +1,15 @@
+{
+  "type": "elementor-template-placeholder",
+  "title": "Contact {{COMPANY_NAME}}",
+  "page": "contact",
+  "sections": [
+    {
+      "id": "contact-main",
+      "type": "contact",
+      "title": "Contact {{COMPANY_NAME}}",
+      "body": "{{CTA_BODY}}",
+      "email": "info@{{DOMAIN}}",
+      "location": "{{CITY}}, {{COUNTRY}}"
+    }
+  ]
+}
