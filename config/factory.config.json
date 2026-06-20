@@ -1,0 +1,19 @@
+{
+  "defaultLanguage": "en",
+  "defaultNiche": "digital marketing agency",
+  "defaultCountry": "United Kingdom",
+  "requiredPages": [
+    "Home",
+    "About Us",
+    "Services",
+    "Contact",
+    "Privacy Policy",
+    "Terms and Conditions",
+    "Cookie Policy"
+  ],
+  "variationLimits": {
+    "heroPerBatch": 2,
+    "palettePerBatch": 2,
+    "layoutFamilyPerBatch": 2
+  }
+}

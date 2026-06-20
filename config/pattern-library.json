@@ -1,0 +1,75 @@
+{
+  "layoutFamilies": [
+    "agency_modern_clear",
+    "studio_editorial_split",
+    "consulting_compact_grid",
+    "growth_dark_accent",
+    "business_soft_panels",
+    "creative_layered_cards"
+  ],
+  "headers": [
+    "center_logo_nav",
+    "left_logo_right_nav",
+    "topbar_contact_nav",
+    "minimal_nav_cta"
+  ],
+  "heroes": [
+    "hero_split_image",
+    "hero_centered_statement",
+    "hero_left_card_stack",
+    "hero_image_band",
+    "hero_metric_strip",
+    "hero_gradient_panel"
+  ],
+  "services": [
+    "services_three_cards",
+    "services_icon_grid",
+    "services_numbered_list",
+    "services_feature_rows",
+    "services_compact_tiles"
+  ],
+  "about": [
+    "about_image_text",
+    "about_text_stats",
+    "about_two_column",
+    "about_timeline_short"
+  ],
+  "cta": [
+    "cta_full_width_band",
+    "cta_split_panel",
+    "cta_centered_box",
+    "cta_footer_lead"
+  ],
+  "footers": [
+    "footer_four_columns",
+    "footer_compact_links",
+    "footer_contact_heavy",
+    "footer_simple_legal"
+  ],
+  "palettes": [
+    { "name": "clear_blue_coral", "primary": "#22577A", "accent": "#FF7A59", "background": "#F7FAFC", "text": "#15202B" },
+    { "name": "forest_lime", "primary": "#214E34", "accent": "#B7D968", "background": "#F8FBF4", "text": "#18251C" },
+    { "name": "ink_gold", "primary": "#1F2937", "accent": "#D6A84F", "background": "#F9FAFB", "text": "#111827" },
+    { "name": "teal_rose", "primary": "#136F63", "accent": "#E76F8A", "background": "#F6FBFA", "text": "#172A2A" },
+    { "name": "plum_mint", "primary": "#5B2E62", "accent": "#58C9B9", "background": "#FBF8FC", "text": "#241827" },
+    { "name": "navy_sky", "primary": "#16324F", "accent": "#6EC6E8", "background": "#F5F8FB", "text": "#14213D" },
+    { "name": "brick_sage", "primary": "#8A3B2F", "accent": "#9DBF9E", "background": "#FCF8F5", "text": "#2B211E" },
+    { "name": "violet_amber", "primary": "#4C3A8F", "accent": "#F4B942", "background": "#F8F7FD", "text": "#1E1B2E" }
+  ],
+  "fontPairs": [
+    { "heading": "Inter", "body": "Open Sans" },
+    { "heading": "Poppins", "body": "Source Sans 3" },
+    { "heading": "Manrope", "body": "Lato" },
+    { "heading": "Montserrat", "body": "Nunito Sans" },
+    { "heading": "DM Sans", "body": "Roboto" },
+    { "heading": "Work Sans", "body": "Arial" }
+  ],
+  "imageDirections": [
+    "modern team planning campaign dashboards",
+    "bright office strategy workshop",
+    "digital analytics and marketing reports",
+    "brand design desk with laptop and notes",
+    "business team reviewing growth charts",
+    "abstract website design and content planning"
+  ]
+}

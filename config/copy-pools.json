@@ -1,0 +1,40 @@
+{
+  "heroKickers": [
+    "Digital growth support",
+    "Practical marketing systems",
+    "Brand and web strategy",
+    "Clear online presence",
+    "Focused campaign planning"
+  ],
+  "heroTemplates": [
+    "{company} helps businesses shape a clearer digital presence with practical strategy, clean web experiences, and focused marketing support.",
+    "Build a stronger online foundation with {company}, a practical partner for websites, content, campaigns, and brand visibility.",
+    "{company} brings together simple planning, sharp creative work, and measured digital execution for growing businesses.",
+    "From first impression to ongoing visibility, {company} helps teams present their services clearly and confidently online."
+  ],
+  "introTemplates": [
+    "We keep the process straightforward: understand the offer, shape the message, build useful touchpoints, and improve what matters.",
+    "Our work is built around clear communication, simple user journeys, and marketing activity that fits the business behind it.",
+    "Every project starts with the essentials: audience, offer, message, channels, and a website structure that supports action."
+  ],
+  "services": [
+    { "title": "Website Planning", "body": "Simple site structures, page messaging, and conversion-focused sections for service businesses." },
+    { "title": "Brand Positioning", "body": "Clear visual and verbal direction so customers understand who you are and why it matters." },
+    { "title": "SEO Foundations", "body": "Practical on-page improvements, content structure, and search-friendly basics." },
+    { "title": "Campaign Support", "body": "Landing pages, promotional content, and digital assets for focused marketing pushes." },
+    { "title": "Content Refresh", "body": "Cleaner copy, stronger service explanations, and page updates that feel more current." },
+    { "title": "Analytics Review", "body": "Basic measurement setup and reporting so decisions are easier to make." }
+  ],
+  "whyChoose": [
+    "Lean process with less overhead.",
+    "Flexible support for small and growing teams.",
+    "Clear writing and practical design decisions.",
+    "Reusable systems that are easy to maintain.",
+    "Balanced focus on brand, content, and performance."
+  ],
+  "ctas": [
+    "Tell us what you want to improve and we will help shape the next practical step.",
+    "Ready to refresh your online presence? Start with a simple conversation.",
+    "Share your goals and we will outline a focused path forward."
+  ]
+}

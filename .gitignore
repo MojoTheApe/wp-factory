@@ -1,0 +1,20 @@
+node_modules/
+.env
+.env.*
+
+# Generated output. Keep production artifacts out of git.
+projects/
+dist/
+exports/
+logs/
+tmp/
+
+# Local screenshots and previews
+*.png
+*.jpg
+*.jpeg
+*.webp
+!assets/**/*.png
+!assets/**/*.jpg
+!assets/**/*.jpeg
+!assets/**/*.webp

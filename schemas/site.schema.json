@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "wp-factory site project",
+  "type": "object",
+  "required": ["projectId", "domain", "companyName", "niche", "language", "country", "brandKit", "copy", "templateComposition", "pages"],
+  "properties": {
+    "projectId": { "type": "string" },
+    "domain": { "type": "string" },
+    "companyName": { "type": "string" },
+    "niche": { "type": "string" },
+    "language": { "type": "string" },
+    "country": { "type": "string" },
+    "city": { "type": "string" },
+    "brandKit": { "type": "object" },
+    "copy": { "type": "object" },
+    "templateComposition": { "type": "object" },
+    "pages": { "type": "array", "items": { "type": "object" } },
+    "assets": { "type": "object" },
+    "deployment": { "type": "object" },
+    "qa": { "type": "object" }
+  }
+}
