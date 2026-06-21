@@ -18,7 +18,8 @@ function readEnvFile(rootDir) {
 }
 
 function previewImageUrl(width, height, query) {
-  return `https://source.unsplash.com/${width}x${height}/?${encodeURIComponent(query)}`;
+  const seed = encodeURIComponent(query.toLowerCase().replace(/[^a-z0-9]+/g, "-"));
+  return `https://picsum.photos/seed/${seed}/${width}/${height}`;
 }
 
 function fallbackImage(role, query, alt, width, height) {
