@@ -43,11 +43,11 @@ Then fill in real local values, including `PEXELS_API_KEY` if stock-image API se
 The repo stores the portable agent instructions here:
 
 ```text
-agents/wp-producer/
-agents/wp-brand-agent/
-agents/wp-copy-agent/
-agents/wp-builder/
-agents/wp-qa-agent/
+agents/wp-1-wendy/
+agents/wp-2-brenda/
+agents/wp-3-cora/
+agents/wp-4-billy/
+agents/wp-5-quentin/
 ```
 
 Copy those folders into the target OpenClaw agents directory:
@@ -73,11 +73,11 @@ Adjust paths for the new machine before restarting OpenClaw:
 Expected active WP Factory agent display names:
 
 ```text
-WP 1 Producer (Wendy)
-WP 2 Brand (Brenda)
-WP 3 Copy (Cora)
-WP 4 Builder (Billy)
-WP 5 QA (Quentin)
+WP Producer
+WP Brand
+WP Copy
+WP Builder
+WP QA
 ```
 
 Do not copy real bot tokens, deploy keys, API keys, or hosting credentials into the repo.

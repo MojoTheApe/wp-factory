@@ -1,18 +1,18 @@
 {
   "note": "Sanitized WP Factory OpenClaw agent registration example. Copy/merge these entries into the target OpenClaw config and adjust paths. No secrets are included.",
   "mainSubagentAllowListAdditions": [
-    "wp-producer",
-    "wp-brand-agent",
-    "wp-copy-agent",
-    "wp-builder",
-    "wp-qa-agent"
+    "wp-1-wendy",
+    "wp-2-brenda",
+    "wp-3-cora",
+    "wp-4-billy",
+    "wp-5-quentin"
   ],
   "agents": [
     {
-      "id": "wp-producer",
-      "name": "WP 1 Producer (Wendy)",
+      "id": "wp-1-wendy",
+      "name": "WP Producer",
       "workspace": "<path-to-cloned-wp-factory-repo>",
-      "agentDir": "<openclaw-agents-dir>/wp-producer",
+      "agentDir": "<openclaw-agents-dir>/wp-1-wendy",
       "model": {
         "primary": "openai/gpt-5.5",
         "fallbacks": [
@@ -55,18 +55,18 @@
       },
       "subagents": {
         "allowAgents": [
-          "wp-brand-agent",
-          "wp-copy-agent",
-          "wp-builder",
-          "wp-qa-agent"
+          "wp-2-brenda",
+          "wp-3-cora",
+          "wp-4-billy",
+          "wp-5-quentin"
         ]
       }
     },
     {
-      "id": "wp-brand-agent",
-      "name": "WP 2 Brand (Brenda)",
+      "id": "wp-2-brenda",
+      "name": "WP Brand",
       "workspace": "<path-to-cloned-wp-factory-repo>",
-      "agentDir": "<openclaw-agents-dir>/wp-brand-agent",
+      "agentDir": "<openclaw-agents-dir>/wp-2-brenda",
       "model": {
         "primary": "openai/gpt-5.5",
         "fallbacks": [
@@ -112,10 +112,10 @@
       }
     },
     {
-      "id": "wp-copy-agent",
-      "name": "WP 3 Copy (Cora)",
+      "id": "wp-3-cora",
+      "name": "WP Copy",
       "workspace": "<path-to-cloned-wp-factory-repo>",
-      "agentDir": "<openclaw-agents-dir>/wp-copy-agent",
+      "agentDir": "<openclaw-agents-dir>/wp-3-cora",
       "model": {
         "primary": "openai/gpt-5.5",
         "fallbacks": [
@@ -161,10 +161,10 @@
       }
     },
     {
-      "id": "wp-builder",
-      "name": "WP 4 Builder (Billy)",
+      "id": "wp-4-billy",
+      "name": "WP Builder",
       "workspace": "<path-to-cloned-wp-factory-repo>",
-      "agentDir": "<openclaw-agents-dir>/wp-builder",
+      "agentDir": "<openclaw-agents-dir>/wp-4-billy",
       "model": {
         "primary": "openai/gpt-5.5",
         "fallbacks": [
@@ -207,15 +207,15 @@
       },
       "subagents": {
         "allowAgents": [
-          "wp-qa-agent"
+          "wp-5-quentin"
         ]
       }
     },
     {
-      "id": "wp-qa-agent",
-      "name": "WP 5 QA (Quentin)",
+      "id": "wp-5-quentin",
+      "name": "WP QA",
       "workspace": "<path-to-cloned-wp-factory-repo>",
-      "agentDir": "<openclaw-agents-dir>/wp-qa-agent",
+      "agentDir": "<openclaw-agents-dir>/wp-5-quentin",
       "model": {
         "primary": "openai/gpt-5.5",
         "fallbacks": [
@@ -258,7 +258,7 @@
       },
       "subagents": {
         "allowAgents": [
-          "wp-builder"
+          "wp-4-billy"
         ]
       }
     }
