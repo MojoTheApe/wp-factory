@@ -29,10 +29,15 @@
     p { line-height: 1.7; color: #4b5563; }
     .kicker { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; font-weight: 800; font-size: 13px; }
     .button { display: inline-block; margin-top: 24px; padding: 15px 22px; border-radius: 4px; color: #fff; background: var(--primary); font-weight: 800; text-decoration: none; }
-    .photo { min-height: 360px; border-radius: 6px; background: radial-gradient(circle at 30% 25%, var(--accent), transparent 24%), radial-gradient(circle at 70% 70%, var(--primary), transparent 32%), #fff; box-shadow: 0 30px 80px rgba(0,0,0,.14); }
+    .photo { min-height: 360px; border-radius: 6px; background: var(--primary); box-shadow: 0 30px 80px rgba(0,0,0,.14); overflow: hidden; }
+    .photo img { width: 100%; min-height: 360px; height: 100%; object-fit: cover; display: block; opacity: .88; }
     section { padding: 74px 0; }
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 30px; }
-    .card { background: #fff; padding: 28px; border-radius: 6px; border: 1px solid #e5e7eb; }
+    .card { background: #fff; border-radius: 6px; border: 1px solid #e5e7eb; overflow: hidden; }
+    .card img { width: 100%; height: 150px; object-fit: cover; display: block; }
+    .card h3, .card p { margin-left: 28px; margin-right: 28px; }
+    .card h3 { margin-top: 24px; }
+    .card p { margin-bottom: 28px; }
     .band { background: var(--primary); color: #fff; text-align: center; }
     .band p { color: rgba(255,255,255,.76); }
     footer { background: #111827; color: #fff; padding: 40px 0; }
@@ -60,7 +65,7 @@
           <p>{{HERO_BODY}}</p>
           <a href="#" class="button">Start a conversation</a>
         </div>
-        <div class="photo"></div>
+        <div class="photo"><img src="{{HERO_IMAGE_URL}}" alt="{{HERO_IMAGE_ALT}}"></div>
       </div>
     </div>
     <section>
@@ -68,16 +73,16 @@
         <h2>Digital support shaped around clear business goals.</h2>
         <p>{{INTRO_BODY}}</p>
         <div class="cards">
-          <div class="card"><h3>{{SERVICE_1_TITLE}}</h3><p>{{SERVICE_1_BODY}}</p></div>
-          <div class="card"><h3>{{SERVICE_2_TITLE}}</h3><p>{{SERVICE_2_BODY}}</p></div>
-          <div class="card"><h3>{{SERVICE_3_TITLE}}</h3><p>{{SERVICE_3_BODY}}</p></div>
+          <div class="card"><img src="{{SERVICE_1_IMAGE_URL}}" alt="{{SERVICE_1_IMAGE_ALT}}"><h3>{{SERVICE_1_TITLE}}</h3><p>{{SERVICE_1_BODY}}</p></div>
+          <div class="card"><img src="{{SERVICE_2_IMAGE_URL}}" alt="{{SERVICE_2_IMAGE_ALT}}"><h3>{{SERVICE_2_TITLE}}</h3><p>{{SERVICE_2_BODY}}</p></div>
+          <div class="card"><img src="{{SERVICE_3_IMAGE_URL}}" alt="{{SERVICE_3_IMAGE_ALT}}"><h3>{{SERVICE_3_TITLE}}</h3><p>{{SERVICE_3_BODY}}</p></div>
         </div>
       </div>
     </section>
     <section>
       <div class="wrap grid">
         <div><h2>About {{COMPANY_NAME}}</h2><p>{{ABOUT_BODY}}</p></div>
-        <div class="photo"></div>
+        <div class="photo"><img src="{{SERVICE_1_IMAGE_URL}}" alt="{{SERVICE_1_IMAGE_ALT}}"></div>
       </div>
     </section>
     <section class="band">

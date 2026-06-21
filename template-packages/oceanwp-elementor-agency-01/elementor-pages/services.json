@@ -7,9 +7,21 @@
       "id": "services-list",
       "type": "cards",
       "items": [
-        { "title": "{{SERVICE_1_TITLE}}", "body": "{{SERVICE_1_BODY}}" },
-        { "title": "{{SERVICE_2_TITLE}}", "body": "{{SERVICE_2_BODY}}" },
-        { "title": "{{SERVICE_3_TITLE}}", "body": "{{SERVICE_3_BODY}}" }
+        {
+          "title": "{{SERVICE_1_TITLE}}",
+          "body": "{{SERVICE_1_BODY}}",
+          "image": { "url": "{{SERVICE_1_IMAGE_URL}}", "alt": "{{SERVICE_1_IMAGE_ALT}}" }
+        },
+        {
+          "title": "{{SERVICE_2_TITLE}}",
+          "body": "{{SERVICE_2_BODY}}",
+          "image": { "url": "{{SERVICE_2_IMAGE_URL}}", "alt": "{{SERVICE_2_IMAGE_ALT}}" }
+        },
+        {
+          "title": "{{SERVICE_3_TITLE}}",
+          "body": "{{SERVICE_3_BODY}}",
+          "image": { "url": "{{SERVICE_3_IMAGE_URL}}", "alt": "{{SERVICE_3_IMAGE_ALT}}" }
+        }
       ]
     }
   ]
