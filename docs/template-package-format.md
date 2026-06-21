@@ -44,8 +44,12 @@ Use double-brace placeholders:
 {{LOGO_TEXT}}
 {{HERO_TITLE}}
 {{HERO_BODY}}
+{{HERO_IMAGE_URL}}
+{{HERO_IMAGE_ALT}}
 {{SERVICE_1_TITLE}}
 {{SERVICE_1_BODY}}
+{{SERVICE_1_IMAGE_URL}}
+{{SERVICE_1_IMAGE_ALT}}
 ```
 
 The replacer applies placeholders to every `.json`, `.html`, `.css`, and `.txt` file in the package.
@@ -65,6 +69,8 @@ exports/<projectId>/
 The first package is an Elementor-style JSON placeholder package, not a real Elementor import yet.
 
 The purpose is to lock the factory contract before hosting is ready. When we get a WordPress server, Billy will replace the fake Elementor JSON with real exported Elementor templates and keep the same variable system.
+
+Image URLs in generated previews are temporary stock placeholders. Production exports should replace them with downloaded, licensed image files and stored attribution before importing into WordPress.
 
 ## Validation
 

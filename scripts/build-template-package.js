@@ -21,6 +21,7 @@ function walk(dir) {
 function buildVariables(site) {
   const services = site.copy.services || [];
   const palette = site.brandKit.palette;
+  const serviceImages = site.assets?.images?.services || [];
   return {
     COMPANY_NAME: site.companyName,
     DOMAIN: site.domain,
@@ -34,15 +35,23 @@ function buildVariables(site) {
     HERO_KICKER: site.copy.heroKicker,
     HERO_TITLE: site.copy.heroTitle,
     HERO_BODY: site.copy.heroBody,
+    HERO_IMAGE_URL: site.assets?.images?.hero?.url || "",
+    HERO_IMAGE_ALT: site.assets?.images?.hero?.alt || site.companyName,
     INTRO_BODY: site.copy.introBody,
     ABOUT_BODY: site.copy.aboutBody,
     CTA_BODY: site.copy.ctaBody,
     SERVICE_1_TITLE: services[0]?.title || "Website Planning",
     SERVICE_1_BODY: services[0]?.body || "",
+    SERVICE_1_IMAGE_URL: serviceImages[0]?.url || "",
+    SERVICE_1_IMAGE_ALT: serviceImages[0]?.alt || services[0]?.title || "Website Planning",
     SERVICE_2_TITLE: services[1]?.title || "Brand Positioning",
     SERVICE_2_BODY: services[1]?.body || "",
+    SERVICE_2_IMAGE_URL: serviceImages[1]?.url || "",
+    SERVICE_2_IMAGE_ALT: serviceImages[1]?.alt || services[1]?.title || "Brand Positioning",
     SERVICE_3_TITLE: services[2]?.title || "Campaign Support",
     SERVICE_3_BODY: services[2]?.body || "",
+    SERVICE_3_IMAGE_URL: serviceImages[2]?.url || "",
+    SERVICE_3_IMAGE_ALT: serviceImages[2]?.alt || services[2]?.title || "Campaign Support",
     CITY: site.city || "Local office",
     COUNTRY: site.country
   };

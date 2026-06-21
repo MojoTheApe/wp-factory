@@ -15,7 +15,20 @@
     "copy": { "type": "object" },
     "templateComposition": { "type": "object" },
     "pages": { "type": "array", "items": { "type": "object" } },
-    "assets": { "type": "object" },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "logo": { "type": "object" },
+        "images": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "hero": { "type": "object" },
+            "services": { "type": "array", "items": { "type": "object" } }
+          }
+        }
+      }
+    },
     "deployment": { "type": "object" },
     "qa": { "type": "object" }
   }

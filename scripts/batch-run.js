@@ -67,11 +67,49 @@ function makeComposition(input, patternLibrary, seed, batchIndex) {
   };
 }
 
+function makeAssetPlan(input, brandKit, seed) {
+  const baseQuery = `${input.niche} ${brandKit.imageDirection}`;
+  const serviceThemes = [
+    "website planning workspace",
+    "brand design laptop",
+    "marketing analytics dashboard"
+  ];
+
+  return {
+    logo: {
+      type: "generated-wordmark",
+      text: initials(input.companyName)
+    },
+    images: {
+      provider: "unsplash-source",
+      hero: {
+        role: "hero",
+        query: baseQuery,
+        alt: `${input.companyName} ${brandKit.imageDirection}`,
+        url: `https://source.unsplash.com/1200x800/?${encodeURIComponent(baseQuery)}`
+      },
+      services: serviceThemes.map((theme, index) => ({
+        role: `service_${index + 1}`,
+        query: `${input.niche} ${theme}`,
+        alt: `${input.companyName} ${theme}`,
+        url: `https://source.unsplash.com/800x600/?${encodeURIComponent(`${input.niche} ${theme}`)}`
+      }))
+    },
+    notes: [
+      "Stock-image URLs are preview placeholders.",
+      "Production should replace these with downloaded, licensed assets and saved attribution."
+    ]
+  };
+}
+
 function renderPreview(site, outputDir) {
   const template = fs.readFileSync(path.join(ROOT, "templates/static-preview.html"), "utf8");
   const fontFamilies = `${site.brandKit.headingFont.replaceAll(" ", "+")}:wght@600;700;800&family=${site.brandKit.bodyFont.replaceAll(" ", "+")}:wght@400;600;700`;
   const servicesHtml = site.copy.services
-    .map((service) => `<article class="card"><h3>${htmlEscape(service.title)}</h3><p class="muted">${htmlEscape(service.body)}</p></article>`)
+    .map((service, index) => {
+      const image = site.assets.images.services[index];
+      return `<article class="card"><img src="${htmlEscape(image.url)}" alt="${htmlEscape(image.alt)}"><h3>${htmlEscape(service.title)}</h3><p class="muted">${htmlEscape(service.body)}</p></article>`;
+    })
     .join("\n          ");
   const whyHtml = site.copy.whyChoose
     .map((item) => `<div class="item"><span class="dot"></span><span>${htmlEscape(item)}</span></div>`)
@@ -101,6 +139,8 @@ function renderPreview(site, outputDir) {
     heroKicker: site.copy.heroKicker,
     heroTitle: site.copy.heroTitle,
     heroBody: site.copy.heroBody,
+    heroImageUrl: site.assets.images.hero.url,
+    heroImageAlt: site.assets.images.hero.alt,
     introBody: site.copy.introBody,
     aboutBody: site.copy.aboutBody,
     ctaBody: site.copy.ctaBody,
@@ -157,23 +197,23 @@ function createSite(input, batchIndex, config, patternLibrary, copyPools) {
     city: input.city || ""
   };
 
-  return {
+  const brandKit = makeBrandKit(normalized, patternLibrary, batchIndex);
+  const site = {
     projectId,
     ...normalized,
-    brandKit: makeBrandKit(normalized, patternLibrary, batchIndex),
+    brandKit,
     copy: makeCopy(normalized, copyPools, seed),
     templateComposition: makeComposition(normalized, patternLibrary, seed, batchIndex),
     pages: config.requiredPages.map((title) => ({ title, slug: slugify(title), status: "draft-ready" })),
-    assets: {
-      logo: "generated-wordmark",
-      imageDirection: ""
-    },
+    assets: makeAssetPlan(normalized, brandKit, seed),
     deployment: {
       status: "not_configured",
       note: "MVP does not deploy to WordPress."
     },
     qa: {}
   };
+
+  return site;
 }
 
 function main() {
