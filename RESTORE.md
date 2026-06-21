@@ -43,11 +43,11 @@ Then fill in real local values, including `PEXELS_API_KEY` if stock-image API se
 The repo stores the portable agent instructions here:
 
 ```text
-agents/wp-1-wendy/
-agents/wp-2-brenda/
-agents/wp-3-cora/
-agents/wp-4-billy/
-agents/wp-5-quentin/
+agents/wp-1/
+agents/wp-2/
+agents/wp-3/
+agents/wp-4/
+agents/wp-5/
 ```
 
 Copy those folders into the target OpenClaw agents directory:
