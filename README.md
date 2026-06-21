@@ -78,6 +78,10 @@ http://localhost:8088
 
 Full instructions: `docs/local-wordpress-setup.md`
 
+## Restore / Portability
+
+To rebuild WP Factory on another OpenClaw machine, use `RESTORE.md`.
+
 Outputs are written to:
 
 ```text
