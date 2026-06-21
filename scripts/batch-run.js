@@ -13,6 +13,7 @@ const {
   parseCsv,
   htmlEscape
 } = require("./lib");
+const { resolveStockImages } = require("./stock-images");
 
 function getArg(name, fallback = "") {
   const index = process.argv.indexOf(`--${name}`);
@@ -216,7 +217,7 @@ function createSite(input, batchIndex, config, patternLibrary, copyPools) {
   return site;
 }
 
-function main() {
+async function main() {
   const inputPath = getArg("input");
   const limit = Number(getArg("limit", "0"));
   if (!inputPath) {
@@ -230,8 +231,12 @@ function main() {
   const rows = parseCsv(fs.readFileSync(path.resolve(inputPath), "utf8")).slice(0, limit || undefined);
   const summary = [];
 
-  rows.forEach((row, index) => {
+  for (const [index, row] of rows.entries()) {
     const site = createSite(row, index, config, patternLibrary, copyPools);
+    site.assets = await resolveStockImages(site.assets, {
+      rootDir: ROOT,
+      seed: hash(`${site.domain}:${site.companyName}:images`)
+    });
     const projectDir = path.join(ROOT, "projects", site.projectId);
     renderPreview(site, path.join(projectDir, "preview"));
     site.qa = qaSite(site, projectDir);
@@ -244,10 +249,13 @@ function main() {
       verdict: site.qa.verdict,
       preview: path.relative(process.cwd(), path.join(projectDir, "preview/index.html"))
     });
-  });
+  }
 
   writeJson(path.join(ROOT, "projects", "last-batch-summary.json"), summary);
   console.log(JSON.stringify(summary, null, 2));
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
