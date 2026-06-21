@@ -10,7 +10,7 @@
   "agents": [
     {
       "id": "wp-1-wendy",
-      "name": "WP Producer",
+      "name": "Wendy - WP Producer",
       "workspace": "<path-to-cloned-wp-factory-repo>",
       "agentDir": "<openclaw-agents-dir>/wp-1-wendy",
       "model": {
@@ -64,7 +64,7 @@
     },
     {
       "id": "wp-2-brenda",
-      "name": "WP Brand",
+      "name": "Brenda - WP Brand",
       "workspace": "<path-to-cloned-wp-factory-repo>",
       "agentDir": "<openclaw-agents-dir>/wp-2-brenda",
       "model": {
@@ -113,7 +113,7 @@
     },
     {
       "id": "wp-3-cora",
-      "name": "WP Copy",
+      "name": "Cora - WP Copy",
       "workspace": "<path-to-cloned-wp-factory-repo>",
       "agentDir": "<openclaw-agents-dir>/wp-3-cora",
       "model": {
@@ -162,7 +162,7 @@
     },
     {
       "id": "wp-4-billy",
-      "name": "WP Builder",
+      "name": "Billy - WP Builder",
       "workspace": "<path-to-cloned-wp-factory-repo>",
       "agentDir": "<openclaw-agents-dir>/wp-4-billy",
       "model": {
@@ -213,7 +213,7 @@
     },
     {
       "id": "wp-5-quentin",
-      "name": "WP QA",
+      "name": "Quentin - WP QA",
       "workspace": "<path-to-cloned-wp-factory-repo>",
       "agentDir": "<openclaw-agents-dir>/wp-5-quentin",
       "model": {

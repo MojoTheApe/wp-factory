@@ -73,11 +73,11 @@ Adjust paths for the new machine before restarting OpenClaw:
 Expected active WP Factory agent display names:
 
 ```text
-WP Producer
-WP Brand
-WP Copy
-WP Builder
-WP QA
+Wendy - WP Producer
+Brenda - WP Brand
+Cora - WP Copy
+Billy - WP Builder
+Quentin - WP QA
 ```
 
 Do not copy real bot tokens, deploy keys, API keys, or hosting credentials into the repo.
